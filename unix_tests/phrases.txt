@@ -1,0 +1,3 @@
+Sou aluno Trybe.
+Estou estudando para ser desenvolvedor web.
+Gosto dos filmes da Marvel.
