@@ -1,5 +1,0 @@
-  293  history
-  294  clear
-  295  history | tail -n 5
-  296  history | tail -5 | cat historico.txt
-  297  history | tail -5 | cat > historico.txt
