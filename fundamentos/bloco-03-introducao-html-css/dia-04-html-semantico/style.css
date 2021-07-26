@@ -1,0 +1,39 @@
+.header{
+  text-align: center;
+  color: white;
+  background-color: black;
+  padding: 10px;
+  font-size: large;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.navigation{
+  background-color: chartreuse;
+  margin: 10px 0px;
+  padding: 10px;
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.article{
+  width: 55%;
+  margin-left: 10%;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h3 {
+  border-bottom: solid 2px black;
+}
+
+.aside{
+  display: inline-block;
+  border: solid 2px black;
+  width: 25%;
+  margin-left: 70%;
+  position: absolute;
+}
+
+
+
