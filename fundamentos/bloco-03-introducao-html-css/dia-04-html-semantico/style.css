@@ -18,9 +18,15 @@
 }
 
 .article{
-  width: 55%;
+  width: 80%;
   margin-left: 10%;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
+  display: inline-block;
+}
+
+.section{
+  width: 70%;
+  display: inline-block;
 }
 
 h3 {
@@ -30,9 +36,18 @@ h3 {
 .aside{
   display: inline-block;
   border: solid 2px black;
-  width: 25%;
-  margin-left: 70%;
+  width: 20%;
   position: absolute;
+  margin-top: 4.5%;
+  margin-left: 3%;
+}
+
+.table-reino{
+  line-height: 35px;
+}
+
+.table-reino td{
+  border: 1px solid chartreuse;
 }
 
 
