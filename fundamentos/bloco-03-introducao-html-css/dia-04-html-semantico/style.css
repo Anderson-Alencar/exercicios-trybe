@@ -49,6 +49,25 @@ h3 {
 .table-reino td{
   border: 1px solid chartreuse;
 }
+.aside-video{
+  display: inline-block;
+  width: 20%;
+  position: absolute;
+  margin-top: 4.5%;
+  margin-left: 3%;
+}
+
+iframe {
+  width: 100%;
+}
+
+.footer{
+  border-top: 1px solid black;
+  margin-top: 100px;
+  padding: 30px;
+  text-align: right;
+  background-color:rgb(236, 236, 235);
+}
 
 
 
