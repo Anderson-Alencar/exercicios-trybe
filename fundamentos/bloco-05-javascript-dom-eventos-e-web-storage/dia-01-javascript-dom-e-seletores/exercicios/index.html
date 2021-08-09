@@ -57,12 +57,25 @@
 
       
       // 1
-      document.getElementById("texto-padrao").innerHTML = 'Em 2 anos estarei formado na trybe com um bom emprego, casado, feliz';
+      function changeText() { 
+        document.getElementById("texto-padrao").innerHTML = 'Em 2 anos estarei formado na trybe com um bom emprego, casado, feliz';
+      }
+      changeText();
 
       // 2
-      let mainContent = document.getElementsByClassName('main-content')[0];
-      mainContent.style.background = 'rgb(76, 164, 109)';
+      function squareGreenTrybe() {
+        let mainContent = document.getElementsByClassName('main-content')[0];
+        mainContent.style.background = 'rgb(76, 164, 109)';
+      }
+      squareGreenTrybe(); 
       
+      // 3
+      function squareWhite() {
+        let centerContent = document.getElementsByClassName('center-content')[0];
+        centerContent.style.background = 'white';
+      }
+      squareWhite();
+
     </script>
   </body>
 </html>
