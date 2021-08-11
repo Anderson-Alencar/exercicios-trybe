@@ -23,7 +23,18 @@ function redirecionaPortifolio() {
   window.open('http://anderson-alencar.github.io', '_blank');
 }
 
+// 5. Crie uma função que, ao passar o mouse sobre 'Meu top 3 do Spotrybefy', altere a cor do mesmo;
 
+myTop3.addEventListener('mouseover', changeColor);
+myTop3.addEventListener('mouseleave', colorOrigin);
+
+function changeColor() {
+  myTop3.style.color = 'red';
+}
+
+function colorOrigin() {
+  myTop3.style.color = 'white';
+}
 
 function resetText(event) {
   // O Event é passado como um parâmetro para a função.
