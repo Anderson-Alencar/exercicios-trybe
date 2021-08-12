@@ -100,6 +100,55 @@
 
       sectionLeft.appendChild(image);
 
+      // 8
+      let listNumber = document.createElement('ul');
+
+      for (let i = 1; i <= 10; i += 1) {
+        let lineNumber = document.createElement('li');
+        
+        switch (i) {
+          case 1:
+            lineNumber.innerText = 'Um';
+            break;
+          case 2:
+            lineNumber.innerText = 'Dois';
+            break;
+          case 3:
+            lineNumber.innerText = 'Três';
+            break;
+          case 4:
+            lineNumber.innerText = 'Quatro';
+            break;
+          case 5:
+            lineNumber.innerText = 'Cinco';
+            break;
+          case 6:
+            lineNumber.innerText = 'Seis';
+            break;
+          case 7:
+            lineNumber.innerText = 'Sete';
+            break;
+          case 8:
+            lineNumber.innerText = 'Oito';
+            break;
+          case 9:
+            lineNumber.innerText = 'Nove';
+            break;
+          case 10:
+            lineNumber.innerText = 'Dez';
+            break;
+          default:
+            break;
+        }
+
+        listNumber.appendChild(lineNumber);
+      }
+
+      sectionRight.appendChild(listNumber);
+      
+
+
+
     </script>
   </body>
 </html>
