@@ -64,6 +64,95 @@
       
       body.appendChild(h1);
 
+      // 2
+      let main = document.createElement('main');
+      main.className = 'main-content';
+
+      body.appendChild(main);
+
+      // 3
+      let section = document.createElement('section');
+      section.className = 'center-content';
+
+      main.appendChild(section);
+
+      // 4
+      let paragraph = document.createElement('p');
+
+      section.appendChild(paragraph);
+
+      // 5
+      let sectionLeft = document.createElement('section');
+      sectionLeft.className = 'left-content';
+
+      main.appendChild(sectionLeft);
+
+      // 6
+      let sectionRight = document.createElement('section');
+      sectionRight.className = 'right-content';
+
+      main.appendChild(sectionRight);
+
+      // 7
+      let image = document.createElement('img');
+      image.src = 'https://picsum.photos/200';
+      image.className = 'small-image';
+
+      sectionLeft.appendChild(image);
+
+      // 8
+      let listNumber = document.createElement('ul');
+
+      for (let i = 1; i <= 10; i += 1) {
+        let lineNumber = document.createElement('li');
+        
+        switch (i) {
+          case 1:
+            lineNumber.innerText = 'Um';
+            break;
+          case 2:
+            lineNumber.innerText = 'Dois';
+            break;
+          case 3:
+            lineNumber.innerText = 'Três';
+            break;
+          case 4:
+            lineNumber.innerText = 'Quatro';
+            break;
+          case 5:
+            lineNumber.innerText = 'Cinco';
+            break;
+          case 6:
+            lineNumber.innerText = 'Seis';
+            break;
+          case 7:
+            lineNumber.innerText = 'Sete';
+            break;
+          case 8:
+            lineNumber.innerText = 'Oito';
+            break;
+          case 9:
+            lineNumber.innerText = 'Nove';
+            break;
+          case 10:
+            lineNumber.innerText = 'Dez';
+            break;
+          default:
+            break;
+        }
+
+        listNumber.appendChild(lineNumber);
+      }
+
+      sectionRight.appendChild(listNumber);
+      
+      // 9
+      for (let h = 1; h <= 3; h += 1) {
+        let header3 = document.createElement('h3');
+
+        main.appendChild(header3);
+      }
+
     </script>
   </body>
 </html>
