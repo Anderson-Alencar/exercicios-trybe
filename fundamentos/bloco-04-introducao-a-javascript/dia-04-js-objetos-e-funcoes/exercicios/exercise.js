@@ -12,3 +12,9 @@ console.log('Bem vindo(a), ' + info['personagem'] + '!');
 // 2 - Insira no objeto uma nova propriedade com o nome de chave 'recorrente' e o valor 'Sim' e, em seguida, imprima o objeto no console. Valor esperado no console:
 
 console.log(info);
+
+// 3 - Faça um for/in que mostre todas as chaves do objeto. Valor esperado no console:
+
+for (const dados in info) {
+  console.log(dados);
+}
