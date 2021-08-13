@@ -30,3 +30,15 @@ function findBigger(array) {
 
 }
 console.log(findBigger([2, 3, 6, 7, 10, 1]));
+
+// 3 - Crie uma função que receba um array de inteiros e retorne o índice do menor valor.
+function findSmaller(array) {
+  let iSmaller = 0;
+  for (let i in array) {
+    if (array[i] < array[iSmaller]) {
+      iSmaller = i;
+    }
+  }
+  return iSmaller;
+}
+console.log(findSmaller([2, 4, 6, 7, 10, 0, -3]));
