@@ -10,3 +10,23 @@ function palindromo(string) {
 }
 console.log(palindromo('arara'));
 console.log(palindromo('desenvolvimento'));
+
+// 2 - Crie uma função que receba um array de inteiros e retorne o índice do maior valor.
+function findBigger(array) {
+  let bigger = array[array.length - 1];
+  let iBigger;
+
+  for (let i = 0; i < array.length - 1; i += 1) { 
+    if (array[i] > bigger) {
+      bigger = array[i];
+    } 
+  }
+  for (let i in array) {
+    if (array[i] === bigger) {
+      iBigger = i;
+    }
+  }
+  return iBigger;
+
+}
+console.log(findBigger([2, 3, 6, 7, 10, 1]));
