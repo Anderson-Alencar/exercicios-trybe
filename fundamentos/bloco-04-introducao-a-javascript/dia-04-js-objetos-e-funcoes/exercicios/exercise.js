@@ -18,3 +18,9 @@ console.log(info);
 for (const dados in info) {
   console.log(dados);
 }
+
+// 4 - Faça um novo for/in , mas agora mostre todos os valores das chaves do objeto. Valor esperado no console:
+
+for (const dados in info) {
+  console.log(info[dados]);
+}
