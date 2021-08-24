@@ -1,0 +1,53 @@
+body {
+  font-size: x-large;
+  margin: 30px;
+}
+h1 {
+  font-size: 36px;
+}
+h2 {
+  font-size: 28px;
+}
+
+img {
+    max-width: 100%;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+
+figure {
+    margin: 0;
+    padding-bottom: 40px;
+}
+
+/* breakpoint 800px */
+@media screen and (min-width: 800px) {
+  body {
+    background-color: wheat;
+    font-size: xx-large;
+    margin: 50px;
+  }
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  figure {
+    width: 35%;
+  }
+  h1 {
+    font-size: 48px;
+    margin: 60px 0;
+  }
+  h2 {
+    font-size: 36px;
+    margin: 60px 0;
+  }
+}
+
+/* breakpoint 1300px */
