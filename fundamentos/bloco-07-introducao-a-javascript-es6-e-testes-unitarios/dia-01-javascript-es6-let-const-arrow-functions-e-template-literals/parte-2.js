@@ -9,4 +9,3 @@ const factorial = number => {
 
 console.log (factorial(5));
 
-//
