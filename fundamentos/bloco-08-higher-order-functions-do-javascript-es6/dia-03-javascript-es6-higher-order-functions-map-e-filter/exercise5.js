@@ -63,19 +63,19 @@ const books = [
   },
 ];
 
-const expectedResult = {
-  author: {
-    birthYear: 1948,
-    name: 'George R. R. Martin',
-  },
-  genre: 'Fantasia',
-  id: 1,
-  name: 'As Crônicas de Gelo e Fogo',
-  releaseYear: 1991,
-};
+// 5 - Crie um array em ordem alfabética apenas com os nomes de todas as pessoas autoras de ficção científica ou fantasia.
+const expectedResult = [
+  'Frank Herbert',
+  'George R. R. Martin',
+  'Isaac Asimov',
+  'J. R. R. Tolkien',
+];
 
-function getNamedBook() {
-  return books.find(book => book.name.length === 26);
+function fantasyOrScienceFictionAuthors() {
+  // escreva seu código aqui
+  const authorFanrOrSci = books.filter(book => book.genre === 'Ficção Científica' || book.genre === 'Fantasia');
+ 
+  return authorFanrOrSci.map(autor => autor.author.name).sort();
 }
 
-assert.deepStrictEqual(getNamedBook(), expectedResult);
+assert.deepStrictEqual(fantasyOrScienceFictionAuthors(), expectedResult);
