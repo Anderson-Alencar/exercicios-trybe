@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <form action="">
+    <fieldset>
+      <legend>DADOS PESSOAIS</legend>
+      <label for="input-name">Nome</label><br>
+      <input type="text" maxlength="40" name="nome" id="input-name" required><br>
+      <label for="input-email">Email</label><br>
+      <input type="text" maxlength="50" required name="email" id="input-email"><br>
+      <label for="input-cpf">CPF</label><br>
+      <input type="text" maxlength="11" required name="cpf" id="input-cpf"><br>
+      <label for="input-endereco">Endereço</label><br>
+      <input type="text" maxlength="200" required name="endereco" id="input-endereco"><br>
+      <label for="input-cidade">Cidade</label><br>
+      <input type="text" maxlength="28" required name="cidade" id="input-cidade">
+      <select name="estado" id="select-estado">
+      </select><br>
+      <input type="radio" name="tipo" id="casa-tipo" required><label for="casa-tipo">Casa</label>
+      <input type="radio" name="tipo" id="ap-tipo" required><label for="ap-tipo">Apartamento</label>    
+    </fieldset>
+    <fieldset>
+      <legend>DADOS PROFISSIONAIS</legend>
+      <label for="">Resumo</label><br>
+      <textarea name="resumo" id="resumo-curriculo" cols="30" rows="5" maxlength="1000" required></textarea><br><br>
+      <label for="">Cargo</label><br>
+      <input type="text" maxlength="40" required><br>
+      <label for="">Descrição do cargo</label><br>
+      <textarea name="" id="" cols="30" rows="5" maxlength="500" required></textarea><br>
+      <label for="">Data de início</label><br>
+      <input type="date" required>
+    </fieldset>
+    <button type="submit" id="btn-enviar">Enviar</button>
+  </form>
+</body>
+<script src="script.js"></script>
+</html>
