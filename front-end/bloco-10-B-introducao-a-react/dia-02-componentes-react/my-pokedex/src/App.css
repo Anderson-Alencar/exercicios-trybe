@@ -1,0 +1,11 @@
+.App {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: space-around;
+}
+
+.title {
+  text-align: center;
+}
+
