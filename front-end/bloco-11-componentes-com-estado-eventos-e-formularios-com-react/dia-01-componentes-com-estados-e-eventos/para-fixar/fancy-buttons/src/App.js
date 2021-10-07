@@ -4,30 +4,38 @@ import React from 'react';
 class App extends React.Component {
   constructor() {
     super()
-
-    this.leftButton = this.leftButton.bind(this);
-    this.centerButton = this.centerButton.bind(this);
-    this.rightButton = this.rightButton.bind(this);
+    // this.leftButton = this.leftButton.bind(this);
+    // this.centerButton = this.centerButton.bind(this);
+    // this.rightButton = this.rightButton.bind(this);
+    this.state = {
+      number: 0,
+    }
   }
   
-  leftButton() {
-    console.log('Clicou no botão da esquerda');
+  leftButton = () => {
+    this.setState((numberPrev, _props) => ({ 
+      number: numberPrev.number - 1 
+    }));
   } 
   
-  centerButton() {
-    console.log('Clicou no botão do centro');
+  centerButton = () => {
+    this.setState({ number: 0 });
   } 
   
-  rightButton () {
-    console.log('Clicou no botão da direita');
+  rightButton = () => {
+    this.setState((numberPrev, _props) => ({ 
+      number: numberPrev.number + 1 
+    }));
   }
 
   render() {
+    const { number } = this.state;
+
     return (
       <div>
-        <button onClick={this.leftButton}>Esquerda</button>
-        <button onClick={this.centerButton}>Centro</button>
-        <button onClick={this.rightButton}>Direita</button>
+        <button onClick={this.leftButton}>Rem --</button>
+        <button onClick={this.centerButton}>{ number }</button>
+        <button onClick={this.rightButton}>Add ++</button>
       </div>
     )
   }
