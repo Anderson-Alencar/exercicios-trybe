@@ -17,7 +17,7 @@ class App extends React.Component {
     this.setState((numberPrev, _props) => ({ 
       number: numberPrev.number - 1 
     }),
-    this.paintButton
+      this.paintButton
     );
   } 
   
