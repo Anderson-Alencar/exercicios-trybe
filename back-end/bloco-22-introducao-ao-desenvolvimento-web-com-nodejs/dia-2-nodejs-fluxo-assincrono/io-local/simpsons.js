@@ -25,6 +25,21 @@ const getSimpsonById = async (searchId) => {
   return chosenSimpson;      
 }
 
-getSimpsonById('2');
+getSimpsonById('2').then((response) => console.log(response));
+
+// Crie uma função que altere o arquivo simpsons.json retirando os personagens com id 10 e 6.
+
+const changeJson = () => {
+  fs.readFile('./simpsons.json', 'utf-8')
+    .then((data) => JSON.parse(data))
+    .then((response) => response.filter(({ id }) => id !== '10' && id !== '6'))
+    .then((filtered) => fs.writeFile('./simpsons.json', JSON.stringify(filtered)))
+}
+
+changeJson();
+
+// Crie uma função que leia o arquivo simpsons.json e crie um novo arquivo, chamado simpsonFamily.json , contendo as personagens com id de 1 a 4.
+
+
 
 
