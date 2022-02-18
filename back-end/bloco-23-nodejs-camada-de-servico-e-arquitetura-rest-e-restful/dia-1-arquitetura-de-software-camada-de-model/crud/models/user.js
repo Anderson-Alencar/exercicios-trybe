@@ -1,6 +1,6 @@
 const connection = require('./connection');
 
-const create = async (firstName, lastName, email, password) => {
+const create = async ({firstName, lastName, email, password}) => {
   const [user] = await connection.execute(
     'INSERT INTO first_crud.users (first_name, last_name, email, password) VALUES (?, ?, ?, ?)',
     [firstName, lastName, email, password],
@@ -29,10 +29,34 @@ const getById = async (id) => {
   );
 
   return user;
+};
+
+const update = async ({firstName, lastName, email, password}, id) => {
+  const [user] = await connection.execute(
+    `
+    UPDATE first_crud.users
+    SET 
+      first_name = ?, 
+      last_name = ?, 
+      email = ?, 
+      password = ?
+    WHERE id = ?
+    `
+    ,
+    [firstName, lastName, email, password, id]
+  );
+
+  return {
+    id,
+    firstName,
+    lastName,
+    email,
+  };
 }
 
 module.exports = {
   create,
   getAll,
   getById,
+  update,
 }
