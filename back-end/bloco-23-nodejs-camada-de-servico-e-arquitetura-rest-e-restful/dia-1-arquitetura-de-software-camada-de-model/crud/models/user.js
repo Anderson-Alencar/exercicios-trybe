@@ -5,17 +5,34 @@ const create = async (firstName, lastName, email, password) => {
     'INSERT INTO first_crud.users (first_name, last_name, email, password) VALUES (?, ?, ?, ?)',
     [firstName, lastName, email, password],
   );
-  console.log(user);
 
   return {
     id: user.insertId,
     firstName,
     lastName,
     email,
-    password
   };
+};
+
+const getAll = async () => {
+  const [users] = await connection.execute(
+    'SELECT id, first_name, last_name, email FROM first_crud.users'
+  );
+
+  return users;
+};
+
+const getById = async (id) => {
+  const [user] = await connection.execute(
+    'SELECT id, first_name, last_name, email FROM first_crud.users WHERE id = ?',
+    [id]
+  );
+
+  return user;
 }
 
 module.exports = {
   create,
+  getAll,
+  getById,
 }

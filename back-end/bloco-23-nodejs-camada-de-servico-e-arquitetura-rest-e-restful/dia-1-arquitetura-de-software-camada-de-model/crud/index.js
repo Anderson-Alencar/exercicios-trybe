@@ -6,7 +6,8 @@ const userModel = require('./models/user');
 const app = express();
 app.use(bodyParser.json());
 
-app.post('/users', async (req, res) => {
+//Create
+app.post('/user', async (req, res) => {
   const { firstName, lastName, email, password } = req.body;
 
   if (!firstName || !lastName || !email || !password) {
@@ -29,6 +30,25 @@ app.post('/users', async (req, res) => {
 
   res.status(201).json(created);
 });
+
+//Read
+app.get('/user', async (req, res) => {
+  const users = await userModel.getAll();
+
+  res.status(200).json(users);
+});
+
+app.get('/user/:id', async (req, res) => {
+  const { id } = req.params;
+
+  const user = await userModel.getById(id);
+
+  if (user.length === 0) return res.status(404).json({ error: 'true ', message: 'Usuário não encontrado'});
+
+  res.status(200).json(user);
+})
+
+
 
 const PORT = 3002;
 
