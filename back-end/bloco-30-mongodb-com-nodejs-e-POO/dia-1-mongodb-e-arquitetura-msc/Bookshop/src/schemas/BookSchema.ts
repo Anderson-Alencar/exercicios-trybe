@@ -1,11 +1,5 @@
 import { Schema } from 'mongoose';
-
-export interface IBook {
-  title:string;
-  author:string;
-  publishedYear:number;
-  weight?:string;
-}
+import IBook from '../interfaces/IBook';
 
 export const BookSchema = new Schema<IBook>({
   title: { type: String, required: true },

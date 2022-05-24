@@ -1,5 +1,6 @@
 import { model as createModel } from 'mongoose';
-import { BookSchema, IBook } from '../schemas/BookSchema';
+import IBook from '../interfaces/IBook';
+import { BookSchema } from '../schemas/BookSchema';
 
 export default class BookModel {
   constructor(private bookModel = createModel<IBook>('books', BookSchema)) {};
