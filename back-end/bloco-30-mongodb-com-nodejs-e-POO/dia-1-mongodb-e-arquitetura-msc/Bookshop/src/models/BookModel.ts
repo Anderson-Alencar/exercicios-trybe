@@ -19,4 +19,13 @@ export default class BookModel {
     const book = await this.bookModel.findOne({ id });
     return book;
   }
+
+  public async editBook(id: string, bookData: object): Promise<IBook | null> {
+    const book = await this.bookModel.findOneAndUpdate(
+      { id },
+      { ...bookData },
+    );
+
+    return book;
+  }
 }
