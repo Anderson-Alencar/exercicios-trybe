@@ -14,4 +14,9 @@ export default class BookModel {
     const book = await this.bookModel.create(bookData);
     return book;
   }
+
+  public async getBook(id: string):Promise<IBook | null> {
+    const book = await this.bookModel.findOne({ id });
+    return book;
+  }
 }
