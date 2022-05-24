@@ -28,4 +28,9 @@ export default class BookModel {
 
     return book;
   }
+
+  public async deleteBook(id: string): Promise<IBook | null> {
+    const book = await this.bookModel.findOneAndDelete({ id });
+    return book;
+  }
 }
